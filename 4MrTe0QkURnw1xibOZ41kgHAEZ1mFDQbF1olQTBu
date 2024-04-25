@@ -1,0 +1,384 @@
+
+if (typeof (window) !== 'undefined' && window.performance && window.performance.mark) {
+  window.performance.mark('yotpo:loader:loaded');
+}
+var yotpoWidgetsContainer = yotpoWidgetsContainer || { guids: {} };
+(function(){
+    var guid = "4MrTe0QkURnw1xibOZ41kgHAEZ1mFDQbF1olQTBu";
+    var loader = {
+        loadDep: function (link, onLoad, strategy) {
+            var script = document.createElement('script');
+            script.onload = onLoad || function(){};
+            script.src = link;
+            if (strategy === 'defer') {
+                script.defer = true;
+            } else if (strategy === 'async') {
+                script.async = true;
+            }
+            script.setAttribute("type", "text/javascript");
+            script.setAttribute("charset", "utf-8");
+            document.head.appendChild(script);
+        },
+        config: {
+            data: {
+                guid: guid
+            },
+            widgets: {
+            
+                "331866": {
+                    instanceId: "331866",
+                    instanceVersionId: "255976536",
+                    templateAssetUrl: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widget-subscriptions-customer-portal/app.v0.7.79-6221.js",
+                    cssOverrideAssetUrl: "",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "add-product-button-text": "Add product",
+                      "add-product-max-quantity-size": "10",
+                      "add-product-quantity-text": "Quantity",
+                      "allow-shipping-price": "false",
+                      "cancel-restriction-order-amount": false,
+                      "content-cancel-text": "Cancel subscription",
+                      "content-changepayment-sendemail-failure-text": "Please try again later",
+                      "content-changepayment-sendemail-init-text": "Update payment method",
+                      "content-changepayment-sendemail-success-text": "Please check your mailbox",
+                      "content-expedite-text": "Expedite",
+                      "content-expiry-order-summary-text": "Order summary",
+                      "content-main-title": "Your subscriptions",
+                      "content-next-date-text": "Next shipment \u0026 charge date: ",
+                      "content-next-date-text-for-prepaid": "Your next shipment: ",
+                      "content-order-summary-text": "Next charge",
+                      "content-pricing-policy-suffix-mobile-text": "off",
+                      "content-pricing-policy-suffix-text": "off with subscription discount",
+                      "content-product-quantity-text": "x {{quantity}}",
+                      "content-shipping-disclaimer-text": "Tax \u0026 shipping rates are calculated at shipping",
+                      "content-shipping-text": "Shipping",
+                      "content-skip-text": "Skip upcoming order",
+                      "content-subscription-status": "n.a.",
+                      "content-tax-disclaimer-text": "Tax \u0026 shipping rates are calculated at shipping",
+                      "content-total-sum-text": "Total",
+                      "content-update-shipping-address-text": "Update shipping address",
+                      "content-welcome-title": "Hi, {{firstName}}",
+                      "contract-id-prefix-symbol": "#",
+                      "contract-id-prefix-text": "Subscription",
+                      "contract-total-sum-text": "Total",
+                      "contract_id": 0,
+                      "dropdown-button-color": "#FBAE3E",
+                      "dropdown-button-text": "Manage subscription",
+                      "dropdown-button-text-color": "#FFF",
+                      "dropdown-loading-animation-color": "grey",
+                      "email-sent-main-content": "Didn’t get the link?",
+                      "email-sent-main-title": "New link sent!",
+                      "email-sent-secondary-content": "Make sure to check your email, including your spam folders.",
+                      "expired-link-button": "Send new link",
+                      "expired-link-main-content": "For your security, the link expires after 24 hours. Click below and we'll send you a new link.",
+                      "expired-link-main-title": "Manage subscriptions link expired",
+                      "external-html-button-customization": "",
+                      "force-mobile-content-loading": "false",
+                      "loyalty-points-text": "points",
+                      "loyalty-redeem-failure-message": "Couldn’t redeem points",
+                      "loyalty-redeem-points-left-title": "You have {{ points }} points",
+                      "loyalty-redeemed-line-title": "{{ points }} points redeemed",
+                      "mode-allow-add-product": "true",
+                      "mode-allow-promotional-banner": true,
+                      "mode-allow-swap-product": "true",
+                      "mode-allow-update-delivery-frequency": true,
+                      "mode-allow-update-product": "true",
+                      "mode-not-active-label": false,
+                      "plan-selection-type": "radio-and-dropdown",
+                      "pop-up-addproduct-text-1-after": "Product added successfully",
+                      "pop-up-addproduct-text-1-before": "Add product",
+                      "pop-up-addproduct-text-1-component-type": "add-product",
+                      "pop-up-addproduct-text-1-confirm": "Add product",
+                      "pop-up-addproduct-text-1-discard": "Back",
+                      "pop-up-addproduct-text-1-discard-action": "back",
+                      "pop-up-addproduct-text-1-icon": "true",
+                      "pop-up-browseproduct-text-1-after": "Product added successfully",
+                      "pop-up-browseproduct-text-1-before": "Choose product",
+                      "pop-up-browseproduct-text-1-component-type": "browse-product",
+                      "pop-up-browseproduct-text-1-confirm": "Continue",
+                      "pop-up-browseproduct-text-1-discard": "Cancel",
+                      "pop-up-browseproduct-text-1-discard-action": "close",
+                      "pop-up-browseproduct-text-1-icon": "true",
+                      "pop-up-cancel-text-1-after": "Your subscription was canceled",
+                      "pop-up-cancel-text-1-before": "Are you sure you want to cancel?",
+                      "pop-up-cancel-text-1-confirm": "Cancel my subscription",
+                      "pop-up-cancel-text-1-discard": "Skip upcoming order",
+                      "pop-up-cancel-text-1-discard-action": "skip",
+                      "pop-up-cancel-text-2-after": "Products in your subscription will not be sent to you anymore and there will not be any future charges.",
+                      "pop-up-cancel-text-2-before": "You can cancel all future deliveries or just skip one delivery but keep your subscription.",
+                      "pop-up-canceleligibility-text-1-before": "Please contact us about this",
+                      "pop-up-canceleligibility-text-1-confirm": "Close",
+                      "pop-up-canceleligibility-text-2-before": "Please contact us about cancelling this subscription",
+                      "pop-up-canceleligibility-text-2-email": "true",
+                      "pop-up-close-button-text": "Close",
+                      "pop-up-close-icon-color": "#9DAFDB",
+                      "pop-up-dialog-background-color": "#ffffff",
+                      "pop-up-dialog-button-text-color": "white",
+                      "pop-up-dialog-button-text-weight": "600",
+                      "pop-up-dialog-font-color": "#272850",
+                      "pop-up-dialog-font-text-weight": "400",
+                      "pop-up-dialog-text-1-after": "We've sent you a verification email",
+                      "pop-up-dialog-text-1-before": "Update payment details",
+                      "pop-up-dialog-text-1-confirm": "Edit payment method",
+                      "pop-up-dialog-text-1-icon": "true",
+                      "pop-up-dialog-text-2-after": "Follow the instructions in the email to continue. Once you've updated your payment method, it may take a few hours for your subscription to become active again.",
+                      "pop-up-dialog-text-2-before": "This subscription is inactive due to a billing issue. To reactivate, update your payment method.",
+                      "pop-up-dialog-text-2-confirm": "Didn’t receive your email? Resend email",
+                      "pop-up-discount-text-1-after": "We've applied the discount to your subscription.",
+                      "pop-up-discount-text-1-before": "Apply discount code",
+                      "pop-up-discount-text-1-component-type": "apply-coupon-code",
+                      "pop-up-discount-text-1-confirm": "Apply",
+                      "pop-up-discount-text-1-discard": "Cancel",
+                      "pop-up-discount-text-1-discard-action": "close",
+                      "pop-up-discount-text-1-icon": "true",
+                      "pop-up-error-text-1-after": "Dang! We missed this one.",
+                      "pop-up-error-text-1-icon": "true",
+                      "pop-up-error-text-2-after": "Well, it happens. We recommend you try again and if this message pops again reach out to us",
+                      "pop-up-error-text-2-email": "true",
+                      "pop-up-payment-text-1-after": "Email was sent successfully",
+                      "pop-up-payment-text-1-before": "Get update payment email",
+                      "pop-up-payment-text-1-confirm": "Send email",
+                      "pop-up-payment-text-1-icon": "true",
+                      "pop-up-payment-text-2-after": "Look for the update payment email in your inbox and click the link in that email.",
+                      "pop-up-payment-text-2-before": "We’ll send an email with a link to update your payment information to:",
+                      "pop-up-payment-text-3-after": "Didn't get the email? Check your spam folder to make sure it didn't end up there.",
+                      "pop-up-payment-text-3-before": "{{ bold_begin }}Tip:{{ bold_end }} If you can’t find the email in your inbox, check your spam folder.",
+                      "pop-up-removeproduct-text-1-after": "Product removed successfully",
+                      "pop-up-removeproduct-text-1-before": "Remove product from subscription?",
+                      "pop-up-removeproduct-text-1-confirm": "Remove",
+                      "pop-up-removeproduct-text-1-discard": "Cancel",
+                      "pop-up-removeproduct-text-1-discard-action": "close",
+                      "pop-up-removeproduct-text-2-before": "You will no longer receive scheduled deliveries of this product.",
+                      "pop-up-removeproduct-text-2-confirm": "Remove product",
+                      "pop-up-skip-text-1-before": "Skip upcoming order?",
+                      "pop-up-skip-text-1-confirm": "Skip order",
+                      "pop-up-skip-text-1-discard": "Cancel",
+                      "pop-up-skip-text-1-discard-action": "close",
+                      "pop-up-skip-text-2-before": "We'll skip your order for {{ currentDeliveryDate }}, and ship your next order on",
+                      "pop-up-skip-text-2-date": "n.a",
+                      "pop-up-support-email": "",
+                      "pop-up-swapproduct-text-1-after": "Product swapped successfully",
+                      "pop-up-swapproduct-text-1-before": "Swap product",
+                      "pop-up-swapproduct-text-1-confirm": "Swap",
+                      "pop-up-swapproduct-text-1-discard": "Back",
+                      "pop-up-swapproduct-text-1-discard-action": "back",
+                      "pop-up-swapproduct-text-1-icon": "true",
+                      "pop-up-swapproduct-text-2-confirm": "Swap product",
+                      "pop-up-updateproduct-text-1-after": "Product updated successfully",
+                      "pop-up-updateproduct-text-1-before": "Update quantity",
+                      "pop-up-updateproduct-text-1-confirm": "Update",
+                      "pop-up-updateproduct-text-1-discard": "Cancel",
+                      "pop-up-updateproduct-text-1-discard-action": "close",
+                      "pop-up-updateproduct-text-1-icon": "true",
+                      "pop-up-updateproduct-text-2-confirm": "Update quantity",
+                      "pop-up-updateshipping-text-1-before": "Update shipping address",
+                      "pop-up-updateshipping-text-1-confirm": "Update",
+                      "pop-up-updateshipping-text-1-discard": "Cancel",
+                      "pop-up-updateshipping-text-1-fields": "firstName:First name;lastName:Last name;country:Country/region;state:State/province;address1:Address;address2:Apartment, suite, etc.;company:Company;city:City;zip:ZIP code;phone:Phone",
+                      "primary-font-name-and-url": "Nunito Sans@700|https://fonts.googleapis.com/css?family=Nunito+Sans:700\u0026display=swap",
+                      "primary-font-size": "18px",
+                      "redeem-points-text": "Redeem points",
+                      "rewards-text": "Rewards",
+                      "secondary-font-name-and-url": "Nunito Sans@400|https://fonts.googleapis.com/css?family=Nunito+Sans:400\u0026display=swap",
+                      "secondary-font-size": "18px",
+                      "show-redeem-points-available-action": "true",
+                      "subscription-canceled-status-label-text": "Canceled",
+                      "subscription-cancelled-status-label-color": "#CB2222",
+                      "subscription-delivery-frequency-color": "",
+                      "subscription-delivery-frequency-font-size": "12px",
+                      "subscription-delivery-frequency-text": "Every {{delivery_interval_count}} {{delivery_interval}}",
+                      "subscription-delivery-frequency-text-prepaid": ", for {{billing_interval_count}} {{billing_interval}}",
+                      "subscription-expired-status-label-color": "#82899A",
+                      "subscription-expired-status-label-text": "Expired",
+                      "subscription-id-font-size": "12px",
+                      "subscription-product-name-text": "",
+                      "subscription-product-thumbnail-src": "",
+                      "subscription-status-label-font-color": "#FFF",
+                      "subscription-status-label-font-size": "10px",
+                      "subscription-total-sum-font-size": "12px",
+                      "update-frequency-action-button-title": "Update frequency",
+                      "update-frequency-close-button-title": "Close",
+                      "update-frequency-discard-button-title": "Cancel",
+                      "update-frequency-dropdown-title": "Change delivery frequency",
+                      "update-frequency-main-title": "Choose new frequency",
+                      "update-frequency-next-delivery-info-text": "Your next order will go out on {{ deliveryDate }}, and {{ frequency }} after that.",
+                      "update-frequency-no-additional-frequencies-main-title": "No additional frequencies",
+                      "update-frequency-no-additional-frequencies-sub-title": "Your subscription is only available {{ originalFrequency }}",
+                      "update-frequency-sub-title": "Your subscription is also available:",
+                      "update-payment-popup": false,
+                      "update-shipping-address-action-type": "update-shipping-address",
+                      "update-shipping-address-empty-address-validation-error-text": "Enter an address",
+                      "update-shipping-address-empty-city-validation-error-text": "Enter a city",
+                      "update-shipping-address-empty-country-validation-error-text": "Enter a country/region",
+                      "update-shipping-address-province-validation-error-text": "Enter a valid state/province",
+                      "update-shipping-address-validation-error-text": "We couldn’t update your changes. Try again.",
+                      "update-shipping-address-zip-validation-error-text": "Enter a valid ZIP code",
+                      "view-actions-cancel-color": "rgba(55,82,82,1)",
+                      "view-actions-expedite-color": "rgba(68,138,255,1)",
+                      "view-actions-skip-color": "rgba(255,82,82,1)",
+                      "view-alignment": "center",
+                      "view-background-color": "transparent",
+                      "view-card-color": "#ffffff",
+                      "view-layout": "multi-product",
+                      "view-primary-color": "#000000",
+                      "view-secondary-color": "#000000",
+                      "view-tile-color": "rgba(255,255,255,1)"
+                    },
+                    staticContent: null,
+                    className: "SubscriptionsCustomerPortal",
+                    dependencyGroupId: null
+                },
+            
+                "331865": {
+                    instanceId: "331865",
+                    instanceVersionId: "13859474",
+                    templateAssetUrl: "https://cdn-widget-assets.yotpo.com/widget-subscriptions-add-to-cart/app.v1.1.66-3966.js",
+                    cssOverrideAssetUrl: "https://cdn-widget-assets.yotpo.com/SubscriptionsAddToCartWidget/4MrTe0QkURnw1xibOZ41kgHAEZ1mFDQbF1olQTBu/css-overrides/css-overrides.2023_02_03_06_57_23_008.css",
+                    customizationCssUrl: "",
+                    customizations: {
+                      "auto-pick-option-index": "0",
+                      "buy-once-text": "One-time purchase",
+                      "discount-label-text": "subscription • save up to ",
+                      "get-it-text": "Get It",
+                      "how-does-it-work-header": "How does it work?",
+                      "is-launched": "true",
+                      "plan-selection-type": "radio-and-dropdown",
+                      "price-label-prefix": "From",
+                      "selling-plan-discount-text": "({{discount}} off)",
+                      "should-auto-inject": true,
+                      "should-show-how-does-it-work": true,
+                      "show-get-it-text": false,
+                      "style-primary-font-size": "13px",
+                      "style-selling-plan-name-font-size": "13px",
+                      "style-selling-plan-options-font-size": "13px",
+                      "styles-colors-text-primary": "#000000",
+                      "styles-font-family": "Nunito Sans@400|https://fonts.googleapis.com/css?family=Nunito+Sans:400\u0026display=swap",
+                      "styles-not-selected-radio-background-color": "#ffffff",
+                      "styles-radio-button-dropdown-background-color": "white",
+                      "styles-radio-button-dropdown-hover-color": "rgba(251, 174, 62, 0.3)",
+                      "styles-radio-button-inner-color": "#FBAE3E",
+                      "styles-radio-button-outer-color": "#000000",
+                      "styles-selected-radio-background-color": "rgba(251, 174, 62, 0.1)",
+                      "styles-selected-radio-border-color": "#F1F1F1",
+                      "styles-selected-radio-border-size": "1px",
+                      "styles-selected-radio-dropdown-border-color": "#676A6C",
+                      "styles-tile-background-color": "#2CCCD3",
+                      "styles-tile-border-color": "#2CCCD3",
+                      "styles-tile-border-size": "2px",
+                      "styles-tile-border-style": "solid",
+                      "styles-tile-font-color": "#FBAE3E",
+                      "subscription-benefits-list": "No commitment, you can cancel or change online anytime.",
+                      "subscription-benefits-should-show": "false",
+                      "subscription-label-should-show": false,
+                      "subscription-label-text": "subscription",
+                      "subscription-policy-description": "You're subscribing to receive this item multiple times, on a recurring basis (according to the frequency you select) with a discount on every recurring order. You may cancel or change your subscription at any time.",
+                      "subscription-policy-footer": "View subscription policy",
+                      "subscription-policy-should-show": "false",
+                      "tiles-full-width": true,
+                      "tiles-label-text": "full price",
+                      "tiles-tile-height": "70"
+                    },
+                    staticContent: null,
+                    className: "SubscriptionsAddToCartWidget",
+                    dependencyGroupId: null
+                },
+            
+            },
+            guidStaticContent: {},
+            dependencyGroups: {}
+        },
+        initializer: "https://cdn-widgetsrepository.yotpo.com/widget-assets/widgets-initializer/app.v0.9.0-6129.js",
+        analytics: "https://cdn-widgetsrepository.yotpo.com/widget-assets/yotpo-pixel/2024-04-04_07-12-10/bundle.js"
+    }
+    
+    
+    const initWidgets = function (config, initializeWidgets = true) {
+        const widgetInitializer = yotpoWidgetsContainer['yotpo_widget_initializer'](config);
+        return widgetInitializer.initWidgets(initializeWidgets);
+    };
+    const initWidget = function (config, instanceId, widgetPlaceHolder) {
+        const widgetInitializer = yotpoWidgetsContainer['yotpo_widget_initializer'](config);
+        if (widgetInitializer.initWidget) {
+            return widgetInitializer.initWidget(instanceId, widgetPlaceHolder);
+        }
+        console.error("initWidget is not supported widgetInitializer");
+    };
+    const onInitializerLoad = function (config) {
+        const prevInitWidgets = yotpoWidgetsContainer.initWidgets;
+        yotpoWidgetsContainer.initWidgets = function (initializeWidgets = true) {
+            if (prevInitWidgets) {
+                if (typeof Promise !== 'undefined' && Promise.all) {
+                    return Promise.all([prevInitWidgets(initializeWidgets), initWidgets(config, initializeWidgets)]);
+                }
+                console.warn('[deprecated] promise is not supported in initWidgets');
+                prevInitWidgets(initializeWidgets);
+            }
+            return initWidgets(config, initializeWidgets);
+        }
+        const prevInitWidget = yotpoWidgetsContainer.initWidget;
+        yotpoWidgetsContainer.initWidget = function (instanceId, widgetPlaceHolder) {
+            if (prevInitWidget) {
+              prevInitWidget(instanceId, widgetPlaceHolder)
+            }
+            return initWidget(config, instanceId, widgetPlaceHolder);
+        }
+        const guidWidgetContainer = getGuidWidgetsContainer();
+        guidWidgetContainer.initWidgets = function () {
+            return initWidgets(config);
+        }
+        guidWidgetContainer.initWidgets();
+    };
+    function getGuidWidgetsContainer () {
+        if (!yotpoWidgetsContainer.guids) {
+            yotpoWidgetsContainer.guids = {};
+        }
+        if (!yotpoWidgetsContainer.guids[guid]) {
+            yotpoWidgetsContainer.guids[guid] = {};
+        }
+        return yotpoWidgetsContainer.guids[guid];
+    }
+    function initWidgetsTestingGroupData(guid) {
+        const testingGroupData = {};
+        const storageData = sessionStorage.getItem(`${guid}_testing_group`);
+        if (storageData) {
+            saveToWidgetsContainer(storageData);
+        } else {
+            testingGroupData.uuid = "a776c03b-d166-44a6-bf32-7b9216d03f2c";
+            const encodedUUID = new TextEncoder().encode(testingGroupData.uuid);
+            crypto.subtle.digest("SHA-1", encodedUUID).then(hashArrayBuffer => {
+                testingGroupData.hash = new Uint8Array(hashArrayBuffer || []);
+                yotpoWidgetsContainer.guids["4MrTe0QkURnw1xibOZ41kgHAEZ1mFDQbF1olQTBu"].testingGroupData = testingGroupData;
+                saveToWidgetsContainer(testingGroupData);
+                saveTestingGroupToSession(guid, testingGroupData);
+            });
+        }
+}
+
+    function saveTestingGroupToSession (guid, testingGroupData) {
+        sessionStorage.setItem(`${guid}_testing_group`, JSON.stringify({
+            uuid: testingGroupData.uuid,
+            hash: testingGroupData.hash
+        }));
+    }
+
+    function    saveToWidgetsContainer(testingGroupData) {
+        const guidWidgetContainer = getGuidWidgetsContainer();
+        guidWidgetContainer.testing_data = testingGroupData;
+    }
+
+    const guidWidgetContainer = getGuidWidgetsContainer();
+    guidWidgetContainer.config = loader.config;
+    if (!guidWidgetContainer.yotpo_widget_scripts_loaded) {
+        initWidgetsTestingGroupData(guid);
+        guidWidgetContainer.yotpo_widget_scripts_loaded = true;
+        guidWidgetContainer.onInitializerLoad = function () { onInitializerLoad(loader.config) };
+        
+        loader.loadDep(loader.analytics, function () {}, 'defer');
+        
+        
+        loader.loadDep(loader.initializer, function () { guidWidgetContainer.onInitializerLoad() }, 'async');
+        
+    }
+})()
+
+

@@ -1,0 +1,2 @@
+$(".client--slider .slide-track").slick({infinite:!0,slidesToShow:4,autoplay:!0,pauseOnHover:!1,arrows:!1,variableWidth:!0,autoplaySpeed:1500,responsive:[{breakpoint:768,settings:{slidesToScroll:1,slidesToShow:1}}]});
+//# sourceMappingURL=/cdn/shop/t/78/assets/custom.js.map?v=17578175860001112341683356606
